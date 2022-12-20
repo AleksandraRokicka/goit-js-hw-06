@@ -29,12 +29,13 @@ const ingredients = [
 //   listIngredients.appendChild(ingredient);
 // });
 
-// funkcja strzałkowa z insertAdjacentElement
+// funkcja strzałkowa z insertAdjacentElement://
 const singleIngredients = ingredients.forEach((e) => {
-  let ingredient = document.createElement("li");
-  ingredient.textContent = e;
-  ingredient.classList.add("item");
+  //pętla po tablicy ingredients//
+  let ingredient = document.createElement("li"); //stworzenie elementów "li"//
+  ingredient.textContent = e; //przypisujemy test do li (e-jako pojedynczy element z tablicy-iterowalismy po niej)//
+  ingredient.classList.add("item"); //dodajemy clasę "item" do ingredient//
 
-  const listIngredients = document.querySelector("#ingredients");
-  listIngredients.insertAdjacentElement("beforeend", ingredient);
+  const listIngredients = document.querySelector("#ingredients"); //dobieramy się do listy ingredients//
+  listIngredients.insertAdjacentElement("beforeend", ingredient); //wrzucamy tą listę//
 });

@@ -1,13 +1,16 @@
 "use strict";
-const input = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const input = document.querySelector("#name-input"); //dobieramy sie do inputa, gdzie wpisujemy wartość//
+const output = document.querySelector("#name-output"); //dobieramy się do inputa, gdzie pokazywane jest nasze wpisane imię//
 
 input.addEventListener("input", (event) => {
-  const inputValue = input.value;
+  //dodajemy eventlistenera - input//
+  const inputValue = input.value; //utworzenie zmiennej by dostać się do wpisanej przez kogos wartosci w inpucie//
 
   if (inputValue === "") {
-    output.textContent = "Anonymous";
+    //jeśli wartość jest pusta...//
+    output.textContent = "Anonymous"; //to output pokazuje tekst Anonymus//
   } else {
-    output.textContent = inputValue;
+    //w przeciwnym razie//
+    output.textContent = inputValue; //output pokazuje tekst - tą wpisaną wartość//
   }
 });

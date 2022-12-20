@@ -14,13 +14,15 @@ const images = [
   },
 ];
 
-const list = document.querySelector(".gallery");
+const list = document.querySelector(".gallery"); //dobieramy się do galerii//
 
 const imageCode = images
   .map(
-    (image) =>
-      `<li class="item"><img class="image" src=${image.url} alt=${image.alt} /></li>`
-  )
-  .join("");
+    (
+      image //robimy pętle po tablicy-stałej z obrazami//
+    ) =>
+      `<li class="item"><img class="image" src=${image.url} alt="${image.alt}"/></li>`
+  ) //dodajemy li o klasie item, dodajemy img o klasie image, robimy ściezkę  do obrazu i tekst alternatywny//
+  .join(""); //usuwamy grawis, który jest między obrazkami, poprzez wrzucenie pustego stringa//
 
-list.insertAdjacentHTML("beforeend", imageCode);
+list.insertAdjacentHTML("beforeend", imageCode); //wrzucamy wszystko w listę//
